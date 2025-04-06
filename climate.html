@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rising Sea Levels</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5db3db;
+        }
+        .navbar {
+            position: sticky; 
+            top: 0;
+            z-index: 1000;
+            background: #2c3e50;
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .navbar li {
+            margin: 0 15px;
+        }
+        .navbar a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #2d0cd1;
+        }
+        .navbar a:active {
+            color: #ff0000;
+        }
+        .navbar ul li:first-child {
+            font-weight: bold;
+        }
+        .navbar ul:last-child {
+            margin-right: 0;
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 30px;
+            background: rgb(200, 208, 255);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            scroll-margin-top: 80px;
+        }
+        .section p {
+            text-align: left;
+        }
+        .section:nth-child(odd) {
+            background-color: #a0a9fa;
+        }
+        h1, h2 {
+            color: #34495e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+        }
+        footer p::after {
+            content: " 🌎";
+        }
+        @media (max-width: 600px) {
+            .navbar ul {
+                flex-direction: column;
+            }
+            .navbar li {
+                margin-bottom: 10px;
+            }
+        }
+        .title {
+            text-align: center;
+            font-size: 50px;
+        }
+        .title p {
+            text-align: left;
+            padding-left: 2%;
+            font-size: 30px;
+        }
+        .title h1::before {
+            content: "🌊 ";
+        }
+        .youtube-logo-footer {
+            width: 80px;
+            height: 50px;
+            background-color: red;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 10px auto;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .triangle-footer {
+            border-top: 12px solid transparent;
+            border-left: 24px solid white;
+            border-bottom: 12px solid transparent;
+        }
+        .search {
+            text-align: right;
+        }
+        .search input:focus{
+            border: 2px solid #3498db;
+            outline: none;
+        }
+        .youtube-logo-header {
+            width: 80px;
+            height: 50px;
+            background-color: red;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .triangle-header {
+            border-top: 12px solid transparent;
+            border-left: 24px solid white;
+            border-bottom: 12px solid transparent;
+        }
+        .logo img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-left: 20px;
+            margin-top: -40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#take-action">Take Action</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="logo">
+                <img
+                class="image"
+                src="climate-logo.png"
+                alt="logo" width="80px">
+            </div>
+        </nav>
+    </header>
+
+    <div class="title">
+        <h1>Rising Sea Levels</h1>
+        <p>By Brian Cheung and Michael Yu</p>
+        <p>Published April 6 2025</p>
+        <div class="youtube-logo-header">
+            <div class="triangle-header"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Data Graph</h2>
+        <p>Global average sea level has risen about 8-9 inches (21-24 centimeters) since 1880.</p>
+        <img
+            class="image"
+            src="rising-sea-level-graph.png"
+            alt="data" width="750px">
+    </div>
+
+    <div class="section">
+        <h2>New Record - 2023</h2>
+        <p>In 2023, global average sea level set a new record high—101.4 mm (3.99 inches) above 1993 levels.</p>
+        <img
+            class="image"
+            src="sea-level-change.png"
+            alt="sea-level" width="750px">
+    </div>
+
+    <div class="section">
+        <h2>Sea Level Acceleration</h2>
+        <p>The rate of global sea level rise is accelerating: it has more than doubled from 0.06 inches (1.4 millimeters) per year throughout most of the twentieth century to 0.14 inches (3.6 millimeters) per year from 2006-2015. </p>
+        <img
+            class="image"
+            src="sea-level-rise-contributors.png"
+            alt="sea-level" width="750px">
+    </div>
+
+    <div class="section">
+        <h2>High Rates Of Sea levels Rising</h2>
+        <p>In many locations along the U.S. coastline, the rate of local sea level rise is greater than the global average due to land processes like erosion, oil and groundwater pumping, and subsidence.</p>
+        <img
+            class="image"
+            src="nuisance-flooding.png"
+            alt="sea-level" width="750px">
+    </div>
+
+    <div class="section">
+        <h2>Reducing Greenhouse Gas Emmisions</h2>
+        <p>If we are able to significantly reduce greenhouse gas emissions, U.S. sea level in 2100 is projected to be around 0.6 meters (2 feet) higher on average than it was in 2000.</p>
+        <img
+            class="image"
+            src="future-sea-level-rise.png"
+            alt="sea-level" width="750px">
+    </div>
+
+    <div class="section">
+        <h2>Future for the United States</h2>
+        <p>On a pathway with high greenhouse gas emissions and rapid ice sheet collapse, models project that average sea level rise for the contiguous United States could be 2.2 meters (7.2 feet) by 2100 and 3.9 meters (13 feet) by 2150. </p>
+        <img
+            class="image"
+            src="us-population-vulnerable.png"
+            alt="sea-level" width="750px">
+    </div>
+
+    <footer>
+        <p>&copy;2025 National Climate Association</p>
+        <p>Follow Us VJ</p>
+        <div class="youtube-logo-footer">
+            <div class="triangle-footer"></div>
+        </div>
+    </footer>
+</body>
+</html>
